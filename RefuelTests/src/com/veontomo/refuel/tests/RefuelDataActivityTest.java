@@ -32,6 +32,8 @@ public class RefuelDataActivityTest extends
 	@Override
 	protected void setUp() throws Exception {
 		super.setUp();
+        setActivityInitialTouchMode(true);
+
 		mRefuelDataActivity = getActivity();
 		mKmText = (TextView) mRefuelDataActivity.findViewById(R.id.km);
 		mKmInput = (EditText) mRefuelDataActivity.findViewById(R.id.kmInput);
@@ -101,6 +103,14 @@ public class RefuelDataActivityTest extends
 		final String expected = mRefuelDataActivity.getString(R.string.fuelStation);
 		final String actual = mFuelStationText.getText().toString();
 		assertEquals(expected, actual);
+	}
+	
+	/**
+	 * See https://developer.android.com/training/activity-testing/activity-ui-testing.html
+	 * for instructions on how to create tests.
+	 */
+	public void testRefuelDataActivityBtnSaveIsPresent(){
+		/// !!! stub
 	}
 
 }
